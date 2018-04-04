@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, TouchableHighlight } from 'react-native'
 import { StackNavigator } from 'react-navigation';
-import Post from './Post';
-import Posts from './Posts';
-import NewPost from './NewPost';
+import { Fab, Icon } from 'native-base';
+
+import Post from './components/posts/Post';
+import Posts from './components/posts/Posts';
+import NewPost from './components/posts/NewPost';
 import navStyles from './styles/navStyles';
 
 class Home extends Component {
   static navigationOptions = {
-    title: 'Home',
-    ...navStyles
+    ...navStyles,
+    title: 'Home'
   };
 
   goToPost = () => {
@@ -24,9 +26,12 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <Posts {...this.props} />
-        <TouchableHighlight onPress={this.goToNewPost} style={styles.newPost}>
-          <Text style={styles.newPostText}>New Post +</Text>
-        </TouchableHighlight>
+        <Fab
+          style={styles.newPost}
+          onPress={this.goToNewPost}
+        >
+          <Icon name="add" />
+        </Fab>
       </View>
     );
   }
@@ -38,12 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   newPost: {
-    backgroundColor: 'cornflowerblue',
-    padding: 20,
-  },
-  newPostText: {
-    fontSize: 20,
-    textAlign: 'center'
+    backgroundColor: 'cornflowerblue'
   }
 });
 

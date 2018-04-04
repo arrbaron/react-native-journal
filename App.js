@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { HttpLink, InMemoryCache, ApolloClient } from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+
 import Navigator from './Navigator';
 
 const client = new ApolloClient({
