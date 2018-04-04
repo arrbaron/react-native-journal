@@ -1,0 +1,28 @@
+module.exports = {
+    extends: "airbnb",
+    rules: {
+        "no-console": "off",
+        "max-len": 0,
+        "comma-dangle": 0,
+        "no-undef": 0,
+        "no-trailing-spaces": 0,
+        "arrow-parens": 0,
+        "arrow-body-style": 0,
+        "class-methods-use-this": 0,
+        "no-underscore-dangle": 0,
+        "jsx-a11y/label-has-for": 0,
+        "react/no-unescaped-entities": 0,
+        "react/prefer-stateless-function": 0,
+        "react/jsx-filename-extension": 0,
+        "react/sort-comp": 0,
+        "react/jsx-wrap-multilines": 0,
+        "react/no-array-index-key": 0,
+        "jsx-a11y/anchor-is-valid": ["error", {
+            "components": ["Link"],
+            "specialLink": ["to"]
+        }],
+        "jsx-a11y/href-no-hash": 0,
+        "global-require": 0,
+        "no-use-before-define": 0
+    }
+};
